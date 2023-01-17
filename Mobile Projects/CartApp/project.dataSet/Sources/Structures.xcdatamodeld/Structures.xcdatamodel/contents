@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model documentVersion="1.0" lastSavedToolsVersion="14903" minimumToolsVersion="Automatic" sourceLanguage="Swift" systemVersion="18G87" type="com.apple.IDECoreDataModeler.DataModel" userDefinedModelVersionIdentifier="">
+
+  <elements>
+    <element height="180" name="Products" positionX="0" positionY="100" width="150"/>
+  </elements>
+
+  <entity codeGenerationType="class" name="Products" representedClassName="Products" syncable="YES">
+    <userInfo>
+      <entry key="globalStamp" value="NO"/>
+      <entry key="primaryKey" value="ID"/>
+    </userInfo>
+    <fetchIndex name="byPrimaryKey">
+      <fetchIndexElement order="ascending" property="iD" type="binary"/>
+    </fetchIndex>
+    <uniquenessConstraints>
+      <uniquenessConstraint>
+        <constraint value="iD"/>
+      </uniquenessConstraint>
+    </uniquenessConstraints>
+    <attribute attributeType="String" indexed="NO" name="name" optional="YES" syncable="YES">
+      <userInfo>
+        <entry key="keyMapping" value="Name"/>
+      </userInfo>
+    </attribute>
+    <attribute attributeType="Transformable" indexed="NO" name="picture" optional="YES" syncable="YES" valueTransformerName="NSSecureUnarchiveFromData">
+      <userInfo>
+        <entry key="keyMapping" value="Picture"/>
+        <entry key="image" value="YES"/>
+      </userInfo>
+    </attribute>
+    <attribute attributeType="Integer 32" indexed="NO" name="price" optional="YES" syncable="YES" usesScalarValueType="YES">
+      <userInfo>
+        <entry key="keyMapping" value="Price"/>
+      </userInfo>
+    </attribute>
+    <attribute attributeType="Integer 32" indexed="NO" name="stock" optional="YES" syncable="YES" usesScalarValueType="YES">
+      <userInfo>
+        <entry key="keyMapping" value="Stock"/>
+        <entry key="integer" value="YES"/>
+      </userInfo>
+    </attribute>
+    <attribute attributeType="String" indexed="NO" name="description_" optional="YES" syncable="YES">
+      <userInfo>
+        <entry key="keyMapping" value="Description"/>
+      </userInfo>
+    </attribute>
+    <attribute attributeType="Integer 32" indexed="NO" name="pack" optional="YES" syncable="YES" usesScalarValueType="YES">
+      <userInfo>
+        <entry key="keyMapping" value="Pack"/>
+        <entry key="integer" value="YES"/>
+      </userInfo>
+    </attribute>
+    <attribute attributeType="String" indexed="NO" name="ref" optional="YES" syncable="YES">
+      <userInfo>
+        <entry key="keyMapping" value="Ref"/>
+      </userInfo>
+    </attribute>
+    <attribute attributeType="Integer 32" indexed="NO" name="iD" optional="YES" syncable="YES" usesScalarValueType="YES">
+      <userInfo>
+        <entry key="keyMapping" value="ID"/>
+      </userInfo>
+    </attribute>
+  </entity>
+
+</model>

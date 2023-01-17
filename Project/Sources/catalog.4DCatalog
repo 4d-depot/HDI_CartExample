@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="CartExample" uuid="6F2920DAC2EF490EA328EFB4F6B6ECDA" collation_locale="en-gb">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="Products" uuid="B8B779B6D8F341CB98F634710537D9BA" id="1">
+		<field name="ID" uuid="2F195C12F72F420D99E26CCF125D6BA0" type="4" unique="true" autosequence="true" not_null="true" id="1">
+			<field_extra position="1"/>
+		</field>
+		<field name="Name" uuid="51E9795B3AFC4538BC5CEEA319DA7A67" type="10" limiting_length="255" id="2">
+			<field_extra position="2"/>
+		</field>
+		<field name="Price" uuid="1F5FFCC7F50B42D08D4BA5582C697C37" type="4" id="3">
+			<field_extra multi_line="false" position="5"/>
+		</field>
+		<field name="Picture" uuid="A9E5D0EBC1B5435EB8F286129DF41B8C" type="12" id="4">
+			<field_extra position="6"/>
+		</field>
+		<field name="Stock" uuid="83647458BFC1487CB3A5D6185AD4BD8F" type="3" id="5">
+			<field_extra position="7"/>
+		</field>
+		<field name="Description" uuid="2B5FB4592CEE4C8085B73DC3054F08FD" type="10" limiting_length="255" id="6">
+			<field_extra position="8"/>
+		</field>
+		<field name="__GlobalStamp" uuid="3988152651EF47CD8BA68E7AF66A3687" type="5" id="7">
+			<field_extra position="9"/>
+		</field>
+		<field name="Pack" uuid="7939D12578D24121BDEB42FABB7313D6" type="3" id="8">
+			<field_extra position="4"/>
+		</field>
+		<field name="Ref" uuid="96EC899C70A34ED29CC68C7B594D28EF" type="10" limiting_length="255" id="9">
+			<field_extra position="3"/>
+		</field>
+		<primary_key field_name="ID" field_uuid="2F195C12F72F420D99E26CCF125D6BA0"/>
+		<table_extra output_form="ProductList" input_form="Detail">
+			<editor_table_info fields_ordering="2" displayable_fields_count="10">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="40" top="40" width="292.65515136719" height="268.89141845703"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="__DeletedRecords" uuid="F0A5A57089B6461194AB95CB73F2E35A" id="2" leave_tag_on_delete="true" prevent_journaling="true">
+		<field name="ID" uuid="93C3256BE45D42E5A6FB13C07D91C49D" type="5" unique="true" autosequence="true" id="1"/>
+		<field name="__Stamp" uuid="71C88CA7A818499FB949F14B847DD963" type="5" id="2"/>
+		<field name="__TableNumber" uuid="AEF23CCC30624A37B1AFBAA43A0E055C" type="4" id="3"/>
+		<field name="__TableName" uuid="138C5C11C4784FCF9F14690EAB9FDF3D" type="10" limiting_length="255" id="4"/>
+		<field name="__PrimaryKey" uuid="0C55DF906A0C45FD9766236842FB296B" type="10" limiting_length="255" id="5"/>
+		<primary_key field_name="ID" field_uuid="93C3256BE45D42E5A6FB13C07D91C49D"/>
+		<table_extra>
+			<editor_table_info fields_ordering="1" displayable_fields_count="6">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="440" top="40" width="120" height="167.33203125"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<index kind="regular" unique_keys="true" uuid="078BD7A68BB248708F243C63E7D8C898" type="7">
+		<field_ref uuid="2F195C12F72F420D99E26CCF125D6BA0" name="ID">
+			<table_ref uuid="B8B779B6D8F341CB98F634710537D9BA" name="Products"/>
+		</field_ref>
+	</index>
+	<index kind="regular" name="__DeletedRecords__Stamp" uuid="807F3FEFDC3540A9B6FA00B13C06C4DD" type="7">
+		<field_ref uuid="71C88CA7A818499FB949F14B847DD963" name="__Stamp">
+			<table_ref uuid="F0A5A57089B6461194AB95CB73F2E35A" name="__DeletedRecords"/>
+		</field_ref>
+	</index>
+	<index kind="regular" name="__GlobalStamp_products" uuid="9CE96DE84F35413A92357D997BCA250C" type="7">
+		<field_ref uuid="3988152651EF47CD8BA68E7AF66A3687" name="__GlobalStamp">
+			<table_ref uuid="B8B779B6D8F341CB98F634710537D9BA" name="Products"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" name="__DeletedRecordsID" uuid="F09422A89280407AA17C30D62BD963EF" type="7">
+		<field_ref uuid="93C3256BE45D42E5A6FB13C07D91C49D" name="ID">
+			<table_ref uuid="F0A5A57089B6461194AB95CB73F2E35A" name="__DeletedRecords"/>
+		</field_ref>
+	</index>
+	<base_extra __stringCompHash="icu:68.1.0" __keywordBuildingHash="icu:68.1.0">
+		<journal_file journal_file_enabled="true"/>
+	</base_extra>
+</base>

@@ -1,0 +1,196 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"label_ID": {
+					"type": "text",
+					"text": "ID:",
+					"top": 98,
+					"left": 11,
+					"width": 100,
+					"height": 17
+				},
+				"field_ID": {
+					"type": "input",
+					"dataSource": "[Table_1:1]ID:1",
+					"top": 98,
+					"left": 121,
+					"width": 250,
+					"height": 17
+				},
+				"label_Name": {
+					"type": "text",
+					"text": "Name:",
+					"top": 135,
+					"left": 11,
+					"width": 100,
+					"height": 17
+				},
+				"field_Name": {
+					"type": "input",
+					"dataSource": "[Table_1:1]Name:2",
+					"top": 135,
+					"left": 121,
+					"width": 250,
+					"height": 17
+				},
+				"label_Price": {
+					"type": "text",
+					"text": "Price:",
+					"top": 172,
+					"left": 11,
+					"width": 100,
+					"height": 17
+				},
+				"field_Price": {
+					"type": "input",
+					"dataSource": "[Table_1:1]Price:3",
+					"top": 172,
+					"left": 121,
+					"width": 250,
+					"height": 17
+				},
+				"label_Picture": {
+					"type": "text",
+					"text": "Picture:",
+					"top": 209,
+					"left": 11,
+					"width": 100,
+					"height": 17
+				},
+				"field_Picture": {
+					"type": "input",
+					"dataSource": "[Table_1:1]Picture:4",
+					"dataSourceTypeHint": "picture",
+					"top": 209,
+					"left": 121,
+					"width": 250,
+					"height": 250
+				},
+				"label_Stock": {
+					"type": "text",
+					"text": "Stock:",
+					"top": 98,
+					"left": 410,
+					"width": 100,
+					"height": 17
+				},
+				"field_Stock": {
+					"type": "input",
+					"dataSource": "[Table_1:1]Stock:5",
+					"top": 98,
+					"left": 520,
+					"width": 250,
+					"height": 17
+				},
+				"Button": {
+					"type": "button",
+					"text": "Cancel",
+					"top": 17,
+					"left": 117,
+					"width": 85,
+					"height": 37,
+					"events": [
+						"onClick"
+					],
+					"action": "cancel"
+				},
+				"Button1": {
+					"type": "button",
+					"text": "Done",
+					"top": 17,
+					"left": 12,
+					"width": 85,
+					"height": 37,
+					"events": [
+						"onClick"
+					],
+					"action": "accept"
+				},
+				"label_Stock1": {
+					"type": "text",
+					"text": "Pack:",
+					"top": 135,
+					"left": 410,
+					"width": 100,
+					"height": 17
+				},
+				"field_Stock1": {
+					"type": "input",
+					"dataSource": "[Products:1]Quantity:8",
+					"top": 135,
+					"left": 520,
+					"width": 250,
+					"height": 17
+				},
+				"label_Stock2": {
+					"type": "text",
+					"text": "Description:",
+					"top": 172,
+					"left": 410,
+					"width": 100,
+					"height": 17
+				},
+				"field_Stock2": {
+					"type": "input",
+					"dataSource": "[Products:1]Description:6",
+					"top": 172,
+					"left": 520,
+					"width": 250,
+					"height": 17
+				},
+				"label_Stock3": {
+					"type": "text",
+					"text": "Ref:",
+					"top": 209,
+					"left": 410,
+					"width": 100,
+					"height": 17
+				},
+				"field_Stock3": {
+					"type": "input",
+					"dataSource": "[Products:1]Ref:9",
+					"top": 209,
+					"left": 520,
+					"width": 250,
+					"height": 17
+				}
+			}
+		}
+	],
+	"geometryStamp": 13
+}

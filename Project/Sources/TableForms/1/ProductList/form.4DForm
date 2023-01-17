@@ -1,0 +1,163 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"markerHeader": 30,
+	"markerBody": 60,
+	"events": [
+		"onLoad"
+	],
+	"windowTitle": "window title",
+	"destination": "listScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"listbox": {
+					"type": "listbox",
+					"dataSource": "Form:C1466.currentSelection",
+					"top": 10,
+					"left": 10,
+					"width": 999,
+					"height": 300,
+					"visibility": "visible",
+					"sizingX": "fixed",
+					"sizingY": "grow",
+					"headerHeight": "2em",
+					"listboxType": "collection",
+					"scrollbarHorizontal": "automatic",
+					"scrollbarVertical": "automatic",
+					"resizingMode": "legacy",
+					"events": [
+						"onLoad",
+						"onValidate",
+						"onClick",
+						"onDisplayDetail",
+						"onDoubleClick",
+						"onLosingFocus",
+						"onGettingFocus",
+						"onDrop",
+						"onDragOver",
+						"onAlternateClick",
+						"onHeaderClick",
+						"onBeginDragOver",
+						"onFooterClick"
+					],
+					"method": "ObjectMethods/listbox.4dm",
+					"columns": [
+						{
+							"name": "__GlobalStamp",
+							"dataSource": "This:C1470.__GlobalStamp",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Global Stamp",
+								"name": ""
+							},
+							"footer": {
+								"name": "1"
+							}
+						},
+						{
+							"name": "ID",
+							"dataSource": "This:C1470.ID",
+							"width": 120,
+							"enterable": false,
+							"header": {
+								"text": "Id",
+								"name": "2"
+							},
+							"footer": {
+								"name": "3"
+							}
+						},
+						{
+							"name": "Name",
+							"dataSource": "This:C1470.Name",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Name",
+								"name": "4"
+							},
+							"footer": {
+								"name": "5"
+							}
+						},
+						{
+							"name": "Picture",
+							"dataSource": "This:C1470.Picture",
+							"width": 120,
+							"enterable": false,
+							"header": {
+								"text": "Picture",
+								"name": "6"
+							},
+							"footer": {
+								"name": "7"
+							}
+						},
+						{
+							"name": "Stock",
+							"dataSource": "This:C1470.Stock",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Stock",
+								"name": "8"
+							},
+							"footer": {
+								"name": "9"
+							}
+						},
+						{
+							"name": "Price",
+							"dataSource": "This:C1470.Price",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Price",
+								"name": "10"
+							},
+							"footer": {
+								"name": "11"
+							}
+						},
+						{
+							"name": "Description",
+							"dataSource": "This:C1470.Description",
+							"width": 120,
+							"enterable": true,
+							"header": {
+								"text": "Description",
+								"name": "12"
+							},
+							"footer": {
+								"name": "13"
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"geometryStamp": 7,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

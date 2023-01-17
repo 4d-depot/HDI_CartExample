@@ -1,0 +1,227 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script type="text/javascript" src="/Scripts/jquery.min.js"></script>
+
+  <title>Cart</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .navBtn {
+      padding: 8px;
+      width: 100px;
+      border: 2px solid white;
+      background-color: transparent;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.1s;
+      margin-top: 50px;
+      font-size: 16px;
+    }
+
+    .btn-enabled {
+      opacity: 1.0;
+    }
+
+    .btn-disabled {
+      opacity: 0.2;
+    }
+
+    .container {
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .pages {
+      display: flex;
+      width: 200%;
+      box-sizing: border-box;
+    }
+
+    .page {
+      width: 100%;
+      padding: 4px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: all 0.7s;
+      color: white;
+    }
+
+    .one {
+      background: linear-gradient(#458ef5, #1d498b);
+    }
+
+    .two {
+      background: linear-gradient(#458ef5, #1d498b);
+    }
+
+    #products {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    #products td,
+    #products th {
+      border: 0px solid #ddd;
+      padding: 8px;
+    }
+
+    .cell-content {
+      color: white;
+      font-size: 16px;
+      weight: 200;
+      font-family: roboto;
+    }
+
+    #products tr:nth-child(even) {
+      background-color: transparent;
+    }
+
+    #products th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: center;
+      color: #7C8097;
+    }
+
+    #products {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .title {
+      margin-top: 20px;
+      margin-bottom: 16px;
+      color: #ffffff;
+      font-family: roboto;
+      weight: 300;
+    }
+
+    .warning-message {
+      color: #ffffff;
+      font-family: roboto;
+      weight: 200;
+      font-size: 20px;
+    }
+
+    table {
+      background: #31394D;
+      border-radius: 20px;
+
+    }
+
+    .btn {
+      border: none;
+      height: 40px;
+      color: #ffffff;
+      width: 80px;
+      font-size: 16px;
+      border-radius: 30px;
+    }
+
+    .btn-delete {
+      background: linear-gradient(to bottom right, #C90A6D, #f0959d);
+    }
+
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="pages">
+    	
+      <div class="page one">
+
+        <div class="title">
+
+          <h1>Stock orders</h1>
+        </div>
+        <!--#4DINCLUDE cart.shtml-->
+
+        <div>
+          <button class="navBtn" onclick="closeFunc()">Back</button>
+
+          <!--#4DIF (Session.storage.mobileData).length>0-->
+
+          <button class ="navBtn btn-enabled" onClick="slide('next')">Validate</button>
+          <!--#4DELSE-->
+          <button class ="navBtn btn-disabled" disabled>Validate</button>
+
+          <!--#4DENDIF-->
+
+        </div>
+
+
+      </div>
+      <div class="page two">
+        <div class="title">
+
+          <h1>Order validation</h1>
+        </div>
+
+        <!--#4DINCLUDE cartValidation.shtml-->
+
+        <div>
+          <button class="navBtn" onClick="slide('prev')">Back</button>
+          <button class="navBtn" onClick="validateAndclose()">Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    const pages = document.querySelectorAll(".page");
+    const translateAmount = 100; 
+    let translate = 0;
+
+    slide = (direction) => {
+
+      direction === "next" ? translate -= translateAmount : translate += translateAmount;
+
+      pages.forEach(
+        pages => (pages.style.transform = `translateX(${translate}%)`)
+        );
+    }
+
+    function closeFunc() {
+      $4d.mobile.dismiss();
+    }
+
+    function validateAndclose() {
+      var request = $.ajax({
+        method: "POST",
+        url: "4DACTION/deleteAllMethod"
+      });
+      
+      request.done(function(resultat) {
+        const messageToDisplay = {
+          message: "Congratulations 🎉 \n Your order has been validated.",
+          success:"true"
+        };
+
+        $4d.mobile.status(messageToDisplay);
+        setTimeout(closeFunc, 2000);
+      });
+    }
+
+  </script>
+</body>
+
+</html>

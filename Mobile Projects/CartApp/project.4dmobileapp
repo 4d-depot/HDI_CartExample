@@ -1,0 +1,270 @@
+{
+	"info": {
+		"version": 8,
+		"target": [
+			"iOS",
+			"android"
+		],
+		"ideVersion": "2000",
+		"ideBuildVersion": "284540",
+		"componentBuild": 284540
+	},
+	"product": {
+		"name": "My App",
+		"version": "1.0",
+		"copyright": "©2022 All rights reserved",
+		"bundleIdentifier": "com.myCompany.My-App"
+	},
+	"organization": {
+		"name": "My Company",
+		"teamId": "UTT7VDX8W5",
+		"id": "com.myCompany",
+		"identifier": "com.myCompany.MYApp"
+	},
+	"developer": {
+		"name": "David Azancot",
+		"id": ""
+	},
+	"server": {
+		"urls": {
+			"production": ""
+		},
+		"authentication": {
+			"email": false
+		}
+	},
+	"main": {
+		"navigationTitle": "My App",
+		"navigationType": "tabbar",
+		"order": [
+			"1"
+		]
+	},
+	"dataSource": {
+		"source": "local",
+		"doNotGenerateDataAtEachBuild": false,
+		"doNotExportImages": false
+	},
+	"ui": {
+		"navigationTransition": "PresentSlideSegue",
+		"dominantColor": "rgb(48,94,150)"
+	},
+	"dataModel": {
+		"1": {
+			"": {
+				"name": "Products",
+				"label": "Stocks",
+				"shortLabel": "Stocks",
+				"primaryKey": "ID",
+				"embedded": true
+			},
+			"2": {
+				"fieldNumber": 2,
+				"name": "Name",
+				"kind": "storage",
+				"fieldType": 0,
+				"label": "Name",
+				"shortLabel": "Name",
+				"valueType": "string",
+				"type": 10
+			},
+			"4": {
+				"fieldNumber": 4,
+				"name": "Picture",
+				"kind": "storage",
+				"fieldType": 3,
+				"label": "Picture",
+				"shortLabel": "Picture",
+				"valueType": "image",
+				"type": 12
+			},
+			"3": {
+				"fieldNumber": 3,
+				"name": "Price",
+				"kind": "storage",
+				"fieldType": 9,
+				"label": "Price",
+				"shortLabel": "Price",
+				"valueType": "number",
+				"type": 4,
+				"format": "integer"
+			},
+			"5": {
+				"fieldNumber": 5,
+				"name": "Stock",
+				"kind": "storage",
+				"fieldType": 8,
+				"label": "Stock",
+				"shortLabel": "Stock",
+				"valueType": "number",
+				"type": 3
+			},
+			"6": {
+				"fieldNumber": 6,
+				"name": "Description",
+				"kind": "storage",
+				"fieldType": 0,
+				"label": "Description",
+				"shortLabel": "Description",
+				"valueType": "string",
+				"type": 10
+			},
+			"8": {
+				"fieldNumber": 8,
+				"name": "Pack",
+				"kind": "storage",
+				"fieldType": 8,
+				"label": "Quantity",
+				"shortLabel": "Quantity",
+				"valueType": "number",
+				"type": 3
+			},
+			"9": {
+				"fieldNumber": 9,
+				"name": "Ref",
+				"kind": "storage",
+				"fieldType": 0,
+				"label": "Ref",
+				"shortLabel": "Ref",
+				"valueType": "string",
+				"type": 10
+			}
+		}
+	},
+	"list": {
+		"1": {
+			"form": "/form-list-VisualTable",
+			"fields": [
+				{
+					"fieldNumber": 4,
+					"name": "Picture",
+					"kind": "storage",
+					"fieldType": 3,
+					"path": "Picture"
+				},
+				{
+					"fieldNumber": 2,
+					"name": "Name",
+					"kind": "storage",
+					"fieldType": 0,
+					"path": "Name"
+				},
+				{
+					"fieldNumber": 9,
+					"name": "Ref",
+					"kind": "storage",
+					"fieldType": 0,
+					"path": "Ref"
+				},
+				{
+					"fieldNumber": 8,
+					"name": "Pack",
+					"kind": "storage",
+					"fieldType": 8,
+					"path": "Pack"
+				},
+				{
+					"fieldNumber": 3,
+					"name": "Price",
+					"kind": "storage",
+					"fieldType": 9,
+					"format": "integer",
+					"path": "Price"
+				},
+				{
+					"fieldNumber": 6,
+					"name": "Description",
+					"kind": "storage",
+					"fieldType": 0,
+					"path": "Description"
+				}
+			],
+			"sectionField": null,
+			"searchableField": {
+				"fieldNumber": 2,
+				"name": "Name",
+				"kind": "storage",
+				"fieldType": 0,
+				"path": "Name"
+			}
+		}
+	},
+	"detail": {
+		"1": {
+			"form": "/form-detail-ParallaxHeader.zip",
+			"fields": [
+				{
+					"fieldNumber": 4,
+					"name": "Picture",
+					"kind": "storage",
+					"fieldType": 3,
+					"path": "Picture"
+				},
+				{
+					"fieldNumber": 2,
+					"name": "Name",
+					"kind": "storage",
+					"fieldType": 0,
+					"path": "Name"
+				},
+				{
+					"fieldNumber": 9,
+					"name": "Ref",
+					"kind": "storage",
+					"fieldType": 0,
+					"path": "Ref"
+				},
+				{
+					"fieldNumber": 6,
+					"name": "Description",
+					"kind": "storage",
+					"fieldType": 0,
+					"path": "Description"
+				},
+				{
+					"fieldNumber": 5,
+					"name": "Stock",
+					"kind": "storage",
+					"fieldType": 8,
+					"path": "Stock"
+				}
+			]
+		}
+	},
+	"actions": [
+		{
+			"name": "addToCart",
+			"scope": "currentRecord",
+			"shortLabel": "Add To Cart",
+			"label": "Add To Cart",
+			"tableNumber": 1,
+			"parameters": [],
+			"icon": "/add.png"
+		},
+		{
+			"preset": "openURL",
+			"name": "openURL",
+			"scope": "table",
+			"label": "Cart",
+			"shortLabel": "Cart",
+			"icon": "/cart.png",
+			"description": "/cartSlider.shtml",
+			"tableNumber": 1
+		},
+		{
+			"preset": "share",
+			"name": "shareContact",
+			"scope": "currentRecord",
+			"label": "Share…",
+			"shortLabel": "Share…",
+			"icon": "actions/Send-basic.svg",
+			"tableNumber": 1
+		}
+	],
+	"allowStructureAdjustments": true,
+	"deepLinking": {
+		"enabled": false,
+		"urlScheme": "My-App://",
+		"associatedDomain": ""
+	}
+}
